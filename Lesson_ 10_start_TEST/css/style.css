@@ -108,6 +108,7 @@ body {
   font-size: 16px;
   background-color: #111428;
   font-family: Gilroy;
+  max-height: 1068px;
 }
 
 .header__container {
@@ -337,10 +338,11 @@ body {
 }
 
 .wrapper {
-  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -353,15 +355,20 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  padding: 20px 0 60px 0;
 }
 
-.page {
-  padding: 63px 0;
+.name-page {
+  color: #a3a3a3;
+  max-width: 1216px;
+  margin: 0px auto 30px;
+}
+
+.name-page span {
+  text-transform: capitalize;
 }
 
 .block__container {
-  max-width: 1216px;
-  height: 530px;
   margin: 0px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -376,6 +383,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 1216px;
+          flex: 1 0 1216px;
 }
 
 .block__items {
@@ -399,6 +409,12 @@ body {
 
 .forms {
   margin-bottom: 30px;
+}
+
+.forms__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .forms__input {
@@ -463,14 +479,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #a15353;
-}
-
-.inform__text {
-  color: #ffffff;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .inform__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
@@ -478,14 +497,18 @@ body {
 
 .inform__link {
   font-size: 18px;
-}
-
-.inform__link a {
-  color: #64b369;
+  max-width: 100%;
+  text-align: center;
 }
 
 .inform__link-text {
+  display: inline;
   color: #ffffff;
+  margin: 0px 0px 0px 10px;
+}
+
+.inform__link-chekin {
+  color: #64b369;
 }
 
 ._webp .menu__items-films::after { background: url(../img/icon.webp) 0 0/100% no-repeat; }
